@@ -13,9 +13,8 @@ set( CMAKE_MODULE_PATH
 
 find_package ( Boost REQUIRED )
 
-if ( CMAKE_COMPILER_IS_GNUCXX )
-    set ( CMAKE_CXX_FLAGS "-std=c++0x" )        ## Optimize
-endif ()
+set ( CMAKE_CXX_COMPILER "g++-4.7" )
+set ( CMAKE_CXX_FLAGS "-std=c++11" )
 
 include_directories ( ${Boost_INCLUDE_DIRS} )
 
